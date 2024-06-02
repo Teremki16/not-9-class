@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(38, 50, 50);
+  color: rgb(162, 162, 162);
+}
+
+.noteForm{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 5px
+}
+
+
+h1 {
+  text-align: center;
+}
+
+#head, #text, #add{
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.a{
+  border: 1px solid black;
+  display:fixed;
+}
