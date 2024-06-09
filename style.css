@@ -22,12 +22,72 @@ h1 {
   text-align: center;
 }
 
-#head, #text, #add{
+#head, #text, #add, #clear{
   border-radius: 10px;
   padding: 7px;
 }
 
-.a{
-  border: 1px solid black;
-  display:fixed;
+.btns{
+  display: flex;
 }
+
+#add{
+  flex-grow: 1;
+}
+
+.a{
+ 
+  
+ position: fixed;}
+
+
+.note {
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.notes{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.3rem;
+  margin: 10px;
+  
+}
+
+.note {
+  border: 2px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f4f4f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  
+}
+
+
+.zagolovok {
+  font-size: larger;
+  color: rgb(51, 48, 48);
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.knopka {
+  display: flex;
+  justify-content: space-around;
+
+}
+.note ul{
+  padding-left: 10px;
+}
+
+.note.true{
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: gray;
+}
+/* .text ::before {
+  text-decoration:dotted;
+} */
