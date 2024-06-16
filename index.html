@@ -12,6 +12,9 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css'
     integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=='
     crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.core.css' integrity='sha512-eZih0rne5vAjEWet1syNsU3LTj1TygGLuLq304xv+JZeaIqi1E1OCbYFD0YPMqhgqFYoOH28QJzJIj+wkVWm+A==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.bootstrap.css' integrity='sha512-eauod+oRhJ84heQKG7Koq4RFiVEXhqhi14M+3+m/6XPJ/FmRHz4yDJ9mtz1X8HdOmQjdX69Wg8/rKal7lgEfsw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.js' integrity='sha512-7Qu5pr+fIUNnTgU03DC5Y1b3brNO64CQUCT1X+hEcbMM8NGasu+WWBVtF7byk01X+gFdZqSPDpOV3y5lFair0A==' crossorigin='anonymous'></script>
   <title>Document</title>
 </head>
 
@@ -33,14 +36,22 @@
       
       <div class="data">12:10</div>
       <div class="knopka">
-        <button><i class="fa-solid fa-trash-can"></i></button>
-        <button><i class="fa-solid fa-pencil"></i></button>
-        <button><i class="fa-solid fa-check"></i></button>
+        <button id="trash"><i class="fa-solid fa-trash-can"></i></button>
+        <button id="pencil"><i class="fa-solid fa-pencil"></i></button>
+        <button id="check" ><i class="fa-solid fa-check"></i></button>
       </div>
     </div>
   </div>
 
-  
+  <div id="overlay">
+    <div id="overlay-content">
+        <h2>Зміна нотатки</h2>
+        <input type="text" id="redtitle" placeholder="Title">
+        <textarea id="redtext" rows="5" style="width: 100%;" placeholder="Main text"></textarea>
+        <button class="btn" onclick="saveNote()">Зберегти</button>
+        <button class="btn" onclick="closeOverlay()">Закрити</button>
+    </div>
+</div>
   
 
 
