@@ -34,7 +34,7 @@ function draw() {
   $(".notes").empty();
   notes.forEach((msg) => {
     $(".notes").append(`
-      <div class="note ${msg.complete}">
+      <div class="note ${msg.complete} id${msg.data}" >
       <div class="zagolovok">${msg.title}</div>
       <ul>
       <li><div class="text">${msg.text}</div></li>
@@ -57,8 +57,14 @@ $("#clear").click(() => {
 
 
 function del(id) {
-  notes = notes.filter(item => item.data !== id);
-  draw();
+  // notes = notes.filter(item => item.data = id);
+  let a = notes.find(item => item.data == id);
+  $(".id"+a.data).fadeOut()
+  setTimeout(()=>{
+    notes = notes.filter(item => item.data !== id);
+    draw();
+
+  }, 1000)
 }
 
 function redact(data) {
